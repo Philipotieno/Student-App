@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "18d6efd5-2870-4fba-a37e-67fee637fb16",
+		"name": "Student App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test user\",\n    \"email\": \"brad@gmail.com\",\n    \"rollno\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/create-student",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"create-student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/students/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/edit-student/5e31526390c0e7422616e433",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"edit-student",
+						"5e31526390c0e7422616e433"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Jean oti\",\n\t\"email\" : \"philip@gmail.com\",\n\t\"rollno\" : 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/update-student/5e31526390c0e7422616e433",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"update-student",
+						"5e31526390c0e7422616e433"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/delete-student/5e3152be90c0e7422616e435",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"delete-student",
+						"5e3152be90c0e7422616e435"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d6714e94-7a4d-4d11-bbd0-e379c852c527",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a8777233-02b0-44cd-807e-3235a80bfccf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "3a0f16b4-e398-41f9-8950-0a5877972159",
+			"key": "host",
+			"value": "http://localhost:4000/students",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
