@@ -9,7 +9,7 @@ import './App.css';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import CreateStudent from './components/create-student.component.js';
-import EditStudent from './components/edit-student.component';
+import EditStudent from './components/student-edit.component';
 import ListStudent from './components/student-list.component';
 
 
@@ -34,11 +34,11 @@ function App(props) {
                   </Link>
                 </Nav>
 
-                {/* <Nav>
+                <Nav>
                   <Link to={'/edit-student'} className='nav-link'>
                     Edit Student
                   </Link>
-                </Nav> */}
+                </Nav>
 
                 <Nav>
                   <Link to={'/student-list'} className='nav-link'>
@@ -57,7 +57,7 @@ function App(props) {
                     <Route exact path='/' component={CreateStudent} />
                     <Route path='/create-student' componet={CreateStudent} />
                     <Route path='/edit-student' component={EditStudent} />
-                    <Route path='student-list' component={ListStudent} />
+                    <Route path='/student-list' component={ListStudent} />
                   </Switch>
                 </div>
             </Col>
