@@ -43,7 +43,7 @@ class CreateStudent extends Component {
             rollno: this.state.rollno
         };
 
-        axios.post('http://localhost:4000/students', studentObject)
+        axios.post('http://localhost:4000/students/create-student', studentObject)
             .then(res => console.log(res.data));
 
         this.setState({
@@ -75,10 +75,8 @@ class CreateStudent extends Component {
                     <Button variant='danger' size='lg' block='block' type='submit'>
                         Create Student
                     </Button>
-
                 </Form>
-            </div>
-        );
+            </div>);
     }
 }
 
