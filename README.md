@@ -28,7 +28,7 @@ To start and run the local development server,
     -- Server running at http://localhost:4000
 
 5. Test your endpoints with [Postman](https://getpostman.com). 
-    - Import the postman collection ``
+    - Import the postman collection [Student-App.postman_collection](https://github.com/Philipotieno/Student-App/blob/develop/backend/Student%20App.postman_collection.json)
 
 6. Test the following endpoints
 
